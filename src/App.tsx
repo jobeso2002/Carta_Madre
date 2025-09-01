@@ -10,7 +10,7 @@ export default function CardMadre() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 relative p-4">
       {/* Imágenes lado izquierdo (solo en pantallas medianas en adelante) */}
-      <div className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 flex-col gap-6">
+      <div className="hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 flex-col gap-6">
         <img
           src={imagen1}
           alt="Madre"
@@ -28,31 +28,12 @@ export default function CardMadre() {
         />
       </div>
 
-      {/* Imágenes lado derecho (solo en pantallas medianas en adelante) */}
-      <div className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col gap-6">
-        <img
-          src={imagen4}
-          alt="Madre"
-          className="w-40 h-40 md:w-64 md:h-64 object-contain"
-        />
-        <img
-          src={imagen5}
-          alt="Madre"
-          className="w-40 h-40 md:w-64 md:h-64 object-contain"
-        />
-        <img
-          src={imagen6}
-          alt="Madre"
-          className="w-40 h-40 md:w-64 md:h-64 object-contain"
-        />
-      </div>
-
       {/* Tarjeta central */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="bg-white shadow-2xl rounded-2xl max-w-3xl w-full p-6 md:p-8 text-center"
+        className="bg-white shadow-2xl rounded-2xl max-w-3xl w-full p-6 md:p-8 text-center mx-20 lg:mx-40"
       >
         <h1 className="text-2xl md:text-3xl font-bold text-pink-700 mb-6">
           💖 Para mi madre, María Isabel 💖
@@ -86,6 +67,25 @@ export default function CardMadre() {
           </span>
         </p>
       </motion.div>
+
+      {/* Imágenes lado derecho (solo en pantallas medianas en adelante) */}
+      <div className="hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 flex-col gap-6">
+        <img
+          src={imagen4}
+          alt="Madre"
+          className="w-40 h-40 md:w-64 md:h-64 object-contain"
+        />
+        <img
+          src={imagen5}
+          alt="Madre"
+          className="w-40 h-40 md:w-64 md:h-64 object-contain"
+        />
+        <img
+          src={imagen6}
+          alt="Madre"
+          className="w-40 h-40 md:w-64 md:h-64 object-contain"
+        />
+      </div>
 
       {/* Galería abajo (solo en móviles y tablets) */}
       <div className="flex md:hidden flex-wrap justify-center gap-4 mt-6">
